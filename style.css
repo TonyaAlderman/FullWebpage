@@ -105,3 +105,53 @@ header a:hover {
     font-size: 20px;
 }
 
+#newsletter {
+    background-color: rgb(44, 15, 78);
+    color: linen;
+    padding: 15px;
+}
+/* spacing out contents and centering */
+#newsletter .container {
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+    align-items: center;
+}
+/* matching size of email input to button */
+#newsletter input {
+    padding: 5px;
+    height: 25px;
+    width: 250px;
+}
+
+#boxes {
+    margin-top: 20px;
+}
+/* spacing and aligning */
+#boxes .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#boxes .box {
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+}
+/* setting space, color, size of logos */
+#boxes .box i {
+    font-size: 225px;
+    margin: auto;
+}
+#boxes .box .fa-html5 {
+    color: peru;
+    margin: auto;
+}
+#boxes .box .fa-css3-alt {
+    color: rgb(60, 60, 206);
+    margin: auto;
+}
+#boxes .box .fa-js {
+    color: rgb(221, 186, 97);
+    margin: auto;
+}
