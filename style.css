@@ -6,7 +6,7 @@ body {
     padding: 0;
     margin: 0;
     line-height: 1.5;
-    background-color: rgb(235, 235, 250);
+    background-color: linen;
 }
 /* has divs inside, makes them only fill 85% of the space, sit in middle of page, and anything that hangs outside of "container" is hidden */
 .container {
@@ -37,7 +37,7 @@ ul {
 }
 /* sets light bkgrnd, dark text */
 .light {
-    background-color: rgb(235, 235, 250);
+    background-color: linen;
     color: rgb(44, 15, 78);
 }
 /* sets dark bkgrnd, light text */
@@ -93,6 +93,7 @@ header a:hover {
     background-size: cover;
     text-align: center;
     color: linen;
+    border-bottom: 3px solid lightcoral;
 }
 /* moves it down from top, gives room btwn writing */
 #showcase h1 {
@@ -109,6 +110,7 @@ header a:hover {
     background-color: rgb(44, 15, 78);
     color: linen;
     padding: 15px;
+    border-bottom: 3px solid lightcoral;
 }
 /* spacing out contents and centering */
 #newsletter .container {
@@ -126,7 +128,9 @@ header a:hover {
 
 #boxes {
     margin-top: 20px;
+    border-bottom: 3px solid lightcoral;
 }
+
 /* spacing and aligning */
 #boxes .container {
     display: flex;
@@ -154,4 +158,89 @@ header a:hover {
 #boxes .box .fa-js {
     color: rgb(221, 186, 97);
     margin: auto;
+}
+
+#about {
+    background-color: rgb(44, 15, 78);
+    padding: 20px;
+    border-bottom: 3px solid lightcoral;
+}
+/* turning into grid to specify spacing/placement */
+#about .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 50px;
+}
+
+#about .main-col {
+    color: linen;
+}
+#about .highlight {
+    color: lightcoral;
+    font-weight: bold;
+    font-size: 25px;
+}
+#about .sidebar {
+    margin-top: 50px;
+}
+
+#services .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#services li {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+/* moving it to be even with other column */
+#services .sidebar {
+    margin-top: 50px;
+}
+/* making input areas same size */
+#services input, #services textarea {
+    padding: 5px;
+    width: 90%;
+}
+#services .highlight {
+    color: lightcoral;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+footer {
+    background-color: rgb(44, 15, 78);
+    border-top: 3px solid lightcoral;
+    padding: 20px;
+    color: linen;
+    font-size: 20px;
+    text-align: center;
+}
+/* adjusting to stack components when screen size changes */
+@media (max-width: 768px){
+    header .container, 
+    #newsletter .container, 
+    #boxes .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+/* padding when a bkgrnd pic, not margin - will give white space */
+    #showcase .container {
+        padding-bottom: 50px;
+    }
+
+    #boxes .container .box {
+        width: 80%;
+    }
+
+    #about .container,
+    #services .container {
+        grid-template-columns: 1fr;
+    }
 }
