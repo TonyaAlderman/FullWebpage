@@ -8,18 +8,19 @@ body {
     line-height: 1.5;
     background-color: rgb(235, 235, 250);
 }
-
+/* has divs inside, makes them only fill 85% of the space, sit in middle of page, and anything that hangs outside of "container" is hidden */
 .container {
     width: 85%;
     margin: auto;
     overflow: hidden;
 }
-
+/* pushes the lists up against the very edge of the element */
 ul {
     margin: 0;
     padding: 0;
+    
 }
-
+/* changes look of submit buttons */
 .btn-1 {
     height: 38px;
     background-color: lightcoral;
@@ -28,19 +29,79 @@ ul {
     padding-right: 20px;
     color: #fff;
 }
-
+/* sets size of separate divs */
 .light, .dark {
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+/* sets light bkgrnd, dark text */
 .light {
     background-color: rgb(235, 235, 250);
     color: rgb(44, 15, 78);
 }
-
+/* sets dark bkgrnd, light text */
 .dark {
     background-color: rgb(44, 15, 78);
     color: linen;
 }
+/* bkgrnd and text color, min height, border/line across top of page,  */
+header {
+    background-color: rgb(44, 15, 78);
+    color: linen;
+    min-height: 70px;
+    border-bottom: 3px solid lightcoral;
+    padding: 5px 0;
+}
+/* makes title and links spread out */
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+/* makes list go to middle center of header */
+header ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+/* removes dots, spreads them out */
+header li {
+    list-style: none;
+    padding: 0 20px;
+}
+/* sets color, removes link underlines */
+header a {
+    color: linen;
+    text-decoration: none;
+    font-size: 18px;
+}
+/* changes color of select words */
+header .highlight, header #current a {
+    color: lightcoral;
+    font-weight: bold;
+}
+/* hover effect */
+header a:hover {
+    color: lightsalmon;
+    font-weight: bold;
+}
+/* wil be at least this high but will grow if necessary,s ets bg img andposition */
+#showcase {
+    min-height: 400px;
+    background-image: url(laptop.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: linen;
+}
+/* moves it down from top, gives room btwn writing */
+#showcase h1 {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-size: 55px;
+}
+
+#showcase p {
+    font-size: 20px;
+}
+
